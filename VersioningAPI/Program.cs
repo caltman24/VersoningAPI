@@ -1,10 +1,12 @@
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using VersioningAPI;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerDocs();
 builder.Services.AddApiVersioningOptions().AddApiExplorerOptions();
 
 var app = builder.Build();

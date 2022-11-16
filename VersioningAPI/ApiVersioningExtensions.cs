@@ -8,8 +8,10 @@ internal static class ApiVersioningExtensions
     {
         return services.AddApiVersioning(opts =>
         {
+            const int defaultMajorVersion = 1;
+            
             opts.AssumeDefaultVersionWhenUnspecified = true;
-            opts.DefaultApiVersion = new ApiVersion(1, 0);
+            opts.DefaultApiVersion = new ApiVersion(defaultMajorVersion, 0);
             opts.ReportApiVersions = true;
         });
     }
